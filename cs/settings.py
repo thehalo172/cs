@@ -30,31 +30,31 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 # Application definition
 
 INSTALLED_APPS = [
-'django.contrib.admin',
-'django.contrib.auth',
-'django.contrib.contenttypes',
-'django.contrib.sessions',
-'django.contrib.messages',
-'django.contrib.staticfiles',
-'rest_framework',
-'rest_framework.authtoken',
-'Login'
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'Login'
 ]
 
 SITE_ID = 1
 
 REST_FRAMEWORK = {
-'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAuthenticated',),
-'DEFAULT_AUTHENTICATION_CLASSES':('rest_framework.authentication.TokenAuthentication',),
-'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
-'PAGE_SIZE': 100
+    'DEFAULT_PERMISSION_CLASSES':('rest_framework.permissions.IsAuthenticated',),
+    'DEFAULT_AUTHENTICATION_CLASSES':('rest_framework.authentication.TokenAuthentication',),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 100
 }
 
 CORS_ALLOW_METHODS = (
-'DELETE',
-'GET',
-'POST',
-'PUT',
+    'DELETE',
+    'GET',
+    'POST',
+    'PUT',
 )
 
 MIDDLEWARE = [
