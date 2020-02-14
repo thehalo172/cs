@@ -19,6 +19,12 @@ from django.conf.urls import include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 
+
+from django.conf.urls import url
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title='Eso Brad')
+
 # Serializers define the API representation.
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -37,4 +43,5 @@ urlpatterns = [
     re_path(r'^',include(router.urls)),
     re_path(r'^api/v1/', include('Login.urls')),
     re_path(r'^api/v2/', include('Profile.urls')),
+    path('api_documentation/', schema_view),
 ]
